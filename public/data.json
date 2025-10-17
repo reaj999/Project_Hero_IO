@@ -1,0 +1,272 @@
+[
+  {
+    "image": "https://images.unsplash.com/photo-1558655146-d09347e92766",
+    "title": "ChatBay AI Assistant",
+    "companyName": "BayTech Labs",
+    "id": 1001,
+    "description": "Your intelligent AI companion for daily productivity, creativity, and research assistance.",
+    "size": 125,
+    "reviews": 4521,
+    "ratingAvg": 4.6,
+    "downloads": "1.0M",
+    "ratings": [
+      { "name": "1 star", "count": 132 },
+      { "name": "2 star", "count": 219 },
+      { "name": "3 star", "count": 411 },
+      { "name": "4 star", "count": 1320 },
+      { "name": "5 star", "count": 2439 }
+    ]
+  },
+  {
+    "image": "https://images.pexels.com/photos/21014/pexels-photo.jpg",
+    "title": "EcoDrive Tracker",
+    "companyName": "GreenBay Solutions",
+    "id": 1002,
+    "description": "Monitor your vehicle’s carbon footprint and optimize fuel efficiency in real time.",
+    "size": 78,
+    "reviews": 2209,
+    "ratingAvg": 4.3,
+    "downloads": "510K",
+    "ratings": [
+      { "name": "1 star", "count": 98 },
+      { "name": "2 star", "count": 154 },
+      { "name": "3 star", "count": 312 },
+      { "name": "4 star", "count": 764 },
+      { "name": "5 star", "count": 881 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
+    "title": "BayMusic Player",
+    "companyName": "SoundBay Entertainment",
+    "id": 1003,
+    "description": "A sleek, modern music player with AI-curated playlists and offline playback.",
+    "size": 64,
+    "reviews": 3480,
+    "ratingAvg": 4.5,
+    "downloads": "890K",
+    "ratings": [
+      { "name": "1 star", "count": 210 },
+      { "name": "2 star", "count": 298 },
+      { "name": "3 star", "count": 452 },
+      { "name": "4 star", "count": 1089 },
+      { "name": "5 star", "count": 1431 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    "title": "TaskFlow Manager",
+    "companyName": "FlowWorks BD",
+    "id": 1004,
+    "description": "Collaborative workflow management tool for hybrid and remote teams.",
+    "size": 112,
+    "reviews": 1930,
+    "ratingAvg": 4.4,
+    "downloads": "420K",
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 142 },
+      { "name": "3 star", "count": 220 },
+      { "name": "4 star", "count": 623 },
+      { "name": "5 star", "count": 865 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1558655146-d09347e92766",
+    "title": "Pixel Rush",
+    "companyName": "Bay Games Studio",
+    "id": 1005,
+    "description": "An addictive neon-themed endless runner with real-time global leaderboards.",
+    "size": 142,
+    "reviews": 6012,
+    "ratingAvg": 4.7,
+    "downloads": "2.2M",
+    "ratings": [
+      { "name": "1 star", "count": 189 },
+      { "name": "2 star", "count": 278 },
+      { "name": "3 star", "count": 599 },
+      { "name": "4 star", "count": 1580 },
+      { "name": "5 star", "count": 3366 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+    "title": "FitBay Tracker",
+    "companyName": "HealthBay Innovations",
+    "id": 1006,
+    "description": "Track workouts, calories, and sleep quality — stay motivated and fit.",
+    "size": 91,
+    "reviews": 2789,
+    "ratingAvg": 4.2,
+    "downloads": "630K",
+    "ratings": [
+      { "name": "1 star", "count": 210 },
+      { "name": "2 star", "count": 289 },
+      { "name": "3 star", "count": 382 },
+      { "name": "4 star", "count": 829 },
+      { "name": "5 star", "count": 1079 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1519241047957-be31d7379a5d",
+    "title": "LearnAI Pro",
+    "companyName": "SmartBay EdTech",
+    "id": 1007,
+    "description": "Learn coding, design, and communication skills with AI-powered lessons.",
+    "size": 156,
+    "reviews": 5321,
+    "ratingAvg": 4.8,
+    "downloads": "1.9M",
+    "ratings": [
+      { "name": "1 star", "count": 101 },
+      { "name": "2 star", "count": 156 },
+      { "name": "3 star", "count": 280 },
+      { "name": "4 star", "count": 932 },
+      { "name": "5 star", "count": 3852 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
+    "title": "SnapBay Editor",
+    "companyName": "Bay Pixel Lab",
+    "id": 1008,
+    "description": "Create, enhance, and transform your photos using advanced editing tools.",
+    "size": 180,
+    "reviews": 4010,
+    "ratingAvg": 4.5,
+    "downloads": "970K",
+    "ratings": [
+      { "name": "1 star", "count": 230 },
+      { "name": "2 star", "count": 302 },
+      { "name": "3 star", "count": 491 },
+      { "name": "4 star", "count": 1154 },
+      { "name": "5 star", "count": 1833 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf",
+    "title": "SafeVault Password Manager",
+    "companyName": "SecureBay Technologies",
+    "id": 1009,
+    "description": "Protect your passwords and personal data with zero-knowledge encryption.",
+    "size": 98,
+    "reviews": 1765,
+    "ratingAvg": 4.6,
+    "downloads": "420K",
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 111 },
+      { "name": "3 star", "count": 211 },
+      { "name": "4 star", "count": 620 },
+      { "name": "5 star", "count": 763 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1501973801540-537f08ccae7b",
+    "title": "WeatherBay Forecast",
+    "companyName": "BayData Analytics",
+    "id": 1010,
+    "description": "Accurate AI-driven weather forecasts and real-time climate insights.",
+    "size": 87,
+    "reviews": 2988,
+    "ratingAvg": 4.1,
+    "downloads": "750K",
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 329 },
+      { "name": "3 star", "count": 600 },
+      { "name": "4 star", "count": 932 },
+      { "name": "5 star", "count": 877 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998",
+    "title": "QuizBay Challenge",
+    "companyName": "EduBay Studios",
+    "id": 1011,
+    "description": "Play, learn, and compete with thousands in real-time knowledge battles.",
+    "size": 134,
+    "reviews": 3891,
+    "ratingAvg": 4.4,
+    "downloads": "1.0M",
+    "ratings": [
+      { "name": "1 star", "count": 156 },
+      { "name": "2 star", "count": 240 },
+      { "name": "3 star", "count": 420 },
+      { "name": "4 star", "count": 1120 },
+      { "name": "5 star", "count": 1955 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1519241047957-be31d7379a5d",
+    "title": "NewsBay Global",
+    "companyName": "MediaBay Network",
+    "id": 1012,
+    "description": "AI-curated world news tailored to your interests and reading habits.",
+    "size": 69,
+    "reviews": 1670,
+    "ratingAvg": 4.0,
+    "downloads": "390K",
+    "ratings": [
+      { "name": "1 star", "count": 220 },
+      { "name": "2 star", "count": 248 },
+      { "name": "3 star", "count": 312 },
+      { "name": "4 star", "count": 480 },
+      { "name": "5 star", "count": 410 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+    "title": "ChatBoard Team",
+    "companyName": "CollabBay Systems",
+    "id": 1013,
+    "description": "Collaborate, plan, and communicate effectively with your entire team.",
+    "size": 142,
+    "reviews": 2389,
+    "ratingAvg": 4.5,
+    "downloads": "620K",
+    "ratings": [
+      { "name": "1 star", "count": 92 },
+      { "name": "2 star", "count": 130 },
+      { "name": "3 star", "count": 265 },
+      { "name": "4 star", "count": 820 },
+      { "name": "5 star", "count": 1082 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1616469829510-946cc0f6c4a8",
+    "title": "BayTranslate",
+    "companyName": "LinguaBay",
+    "id": 1014,
+    "description": "Instant text and voice translation powered by neural AI models.",
+    "size": 102,
+    "reviews": 3312,
+    "ratingAvg": 4.7,
+    "downloads": "1.1M",
+    "ratings": [
+      { "name": "1 star", "count": 130 },
+      { "name": "2 star", "count": 188 },
+      { "name": "3 star", "count": 321 },
+      { "name": "4 star", "count": 1020 },
+      { "name": "5 star", "count": 1653 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7",
+    "title": "Pass Pass File Share",
+    "companyName": "Reaj Labs",
+    "id": 1015,
+    "description": "Seamlessly share files between Android, iOS, Windows, and Mac devices.",
+    "size": 89,
+    "reviews": 5120,
+    "ratingAvg": 4.9,
+    "downloads": "2.8M",
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 102 },
+      { "name": "3 star", "count": 215 },
+      { "name": "4 star", "count": 765 },
+      { "name": "5 star", "count": 3958 }
+    ]
+  }
+]
