@@ -4,11 +4,16 @@ import { useParams } from 'react-router';
 import downloadicon from '../../assets/icon-downloads.png';
 import ratingicon from '../../assets/icon-ratings.png';
 import reviewicon from '../../assets/icon-review.png';
+import { AddToInstalledDB } from '../../Components/Utility/AddToInstalled';
 
 const AppDetails = () => {
     const { id } = useParams();
     const appId = parseInt(id);
     const app = data.find(item => item.id === appId);
+
+    const HandleInstalled = (id) => {
+        AddToInstalledDB(id);
+    }
 
     return (
         <div className='bg-[#f8f8f8] min-h-screen pt-10 items-center'>
@@ -41,7 +46,7 @@ const AppDetails = () => {
                     <p className='font-bold text-4xl text-[#001931]'>{app.downloads}</p>
                 </div>
             </div>
-            <button className="btn btn-accent mt-10 text-white font-semibold bg-[#00D390]mb-4">Install Now <span>({app.downloads})</span></button>
+            <button onClick={() => HandleInstalled(id)} className="btn btn-accent mt-10 text-white font-semibold bg-[#00D390]mb-4">Install Now <span>({app.downloads})</span></button>
             </div>
             </div>
         </div>
