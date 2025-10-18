@@ -54,9 +54,13 @@ const Apps = () => {
                 </div>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto pb-8 justify-items-center'>
-                {filteredApps.map((app) => (
-                    <Card key={app.id} app={app} />
-                ))}
+                {filteredApps.length > 0 ? (
+                    filteredApps.map((app) => (
+                        <Card key={app.id} app={app} />
+                    ))
+                ) : (
+                    <p className='text-center text-gray-500 text-lg col-span-full mt-10'>No App Found</p>
+                )}
             </div>
         </div>
     );

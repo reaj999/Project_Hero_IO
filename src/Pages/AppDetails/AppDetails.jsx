@@ -6,6 +6,9 @@ import ratingicon from '../../assets/icon-ratings.png';
 import reviewicon from '../../assets/icon-review.png';
 import { AddToInstalledDB, getInstalledApps } from '../../Components/Utility/AddToInstalled';
 import BarChart from '../../Components/Rating Chart/RatingChart';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const AppDetails = () => {
     const { id } = useParams();
@@ -24,10 +27,21 @@ const AppDetails = () => {
     const HandleInstalled = (id) => {
         AddToInstalledDB(id);
         setIsInstalled(true);
+        toast.success('App Installed Successfully!', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
     }
 
     return (
         <div className='bg-[#f8f8f8] min-h-screen pt-10 items-center mb-10'>
+            <ToastContainer />
             <div className='flex flex-col lg:flex-row items-center lg:items-start gap-10 max-w-6xl mx-auto px-4 lg:px-0'>
             <div>
                 <img src={app.image} alt={`${app.title} logo`} className='w-aut0 lg:w-96 lg:h-96 object-cover'/>
