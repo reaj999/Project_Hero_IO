@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import Navbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
-import ErrorImg from '../../assets/error-404.png';
+import ErrorImg from '../../assets/App-Error.png';
 
 const ErrorPage = () => {
     return (

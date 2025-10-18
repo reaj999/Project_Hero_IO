@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import data from '../../../public/data.json';
-import { getInstalledApps } from '../../Components/Utility/AddToInstalled';
+import { getInstalledApps, removeInstalledApp } from '../../Components/Utility/AddToInstalled';
 import ListCard from './installedListCard';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import dd from '../../assets/dd.png';
 
-const installation = () => {
+const Installation = () => {
 
     const [myInstalledList, setInstalledApps] = useState([]);
+    const [sortOption, setSortOption] = useState("recent");
 
 
     useEffect(() => {
@@ -17,32 +21,85 @@ const installation = () => {
 
     const handleUninstall = (id) => {
         setInstalledApps(prev => prev.filter(app => app.id !== id));
+        removeInstalledApp(id);
     };
+
+    //   const handleSort = (option) => {
+    //     setSortOption(option);
+    //     let sortedList = [...myInstalledList];
+
+    //     if (option === 'Small to Large') {
+    //     sortedList.sort((a, b) => a.size - b.size);
+    //     } else if (option === 'Large to Small') {
+    //     sortedList.sort((a, b) => b.size - a.size);
+    //     } else if (option === 'Recently Added') {
+    //     sortedList.sort((a, b) => b.id - a.id); // assuming higher ID = newer
+    //     }
+
+    //     setInstalledApps(sortedList);
+    // };
+
+        const sortedApps = [...myInstalledList].sort((a, b) => {
+        if (sortOption === "small") {
+        return a.size - b.size;
+        } else if (sortOption === "large") {
+        return b.size - a.size;
+        } else {
+        return b.id - a.id; // Recently added (by ID)
+        }
+    });
     
     return (
         <div className='bg-[#f8f8f8] min-h-screen'>
+            <ToastContainer />
             <h1 className='text-4xl font-bold text-center my-8 text-[#001931]'>Your Installed Apps</h1>
             <p className='text-[#627382] text-lg mt-8 text-center mb-8'>Explore All Trending Apps on the Market developed by us</p>
-        {/* Installation content will go here */}
-        <div>
-            <div className='flex flex-col lg:flex-row gap-4 lg:justify-between max-w-6xl mx-auto items-center mb-6 px-4 lg:px-0'>
-                    <h2 className='text-xl font-semibold'>
-                        (<span>
-                            {myInstalledList.length}
-                        </span>) Apps Found
-                    </h2>
+        <div className='max-w-6xl mx-auto px-4 mb-6 flex justify-between items-center   gap-4'>
+            <h2 className='text-xl font-semibold'>
+                (<span>{myInstalledList.length}</span>) Apps Found
+            </h2>
+            {/* <div className="dropdown dropdown-bottom dropdown-end">
+            <div tabIndex={0} role="button" className="btn m-1 font-light">Sort By Size 
+                <img src={dd} alt=""  className='w-2 h-2'/>
             </div>
+            <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                <li><a>Recently Added</a></li>
+                <li><a>Small to Large</a></li>
+                <li><a>Large to Small</a></li>
+            </ul>
+            </div> */}
+
+        <div className="dropdown dropdown-bottom dropdown-end">
+          <div tabIndex={0} role="button" className="btn m-1 font-light">
+            Sort By Size
+            <img src={dd} alt="" className='w-2 h-2' />
+          </div>
+          <ul tabIndex={-1} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+            <li><button onClick={() => setSortOption("recent")}>Recently Added</button></li>
+            <li><button onClick={() => setSortOption("small")}>Small to Large</button></li>
+            <li><button onClick={() => setSortOption("large")}>Large to Small</button></li>
+          </ul>
         </div>
-        {/* <div>
-            <div className=''>
-                {
-                    myInstalledList.map(app => <ListCard key={app.id} myInstalledList={app}></ListCard>)
-                }
-            </div>
-        </div> */}
+
+        </div>
+
         <div>
-            {myInstalledList.length > 0 ? (
+            {/* {myInstalledList.length > 0 ? (
             myInstalledList.map(app => (
+                <ListCard
+                key={app.id}
+                myInstalledList={app}
+                onUninstall={handleUninstall}
+                />
+            ))
+            ) : (
+            <p className='text-center text-gray-500 text-lg'>
+                No installed apps found.
+            </p>
+            )} */}
+
+            {sortedApps.length > 0 ? (
+            sortedApps.map(app => (
                 <ListCard
                 key={app.id}
                 myInstalledList={app}
@@ -59,4 +116,4 @@ const installation = () => {
     );
 };
 
-export default installation;
+export default Installation;

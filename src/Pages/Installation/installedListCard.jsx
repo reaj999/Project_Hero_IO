@@ -2,12 +2,23 @@ import React from 'react';
 import downloadicon from '../../assets/icon-downloads.png';
 import ratingicon from '../../assets/icon-ratings.png';
 import { removeInstalledApp } from '../../Components/Utility/AddToInstalled';
+import { toast } from 'react-toastify';
 
 const installedListCard = ({ myInstalledList: cardData, onUninstall }) => {
 
     const handleUninstall = () => {
     removeInstalledApp(cardData.id);
     onUninstall(cardData.id);
+    toast.success('App Uninstalled Successfully!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
 };
 
     return (
