@@ -1,6 +1,7 @@
 import React from 'react';
 import data from '../../public/data.json';
 import Card from '../Components/Card/Card';
+import { Link } from 'react-router';
 
 const TrendingApps = () => {
     return (
@@ -15,7 +16,7 @@ const TrendingApps = () => {
                 ))}
             </div>
             <div className='flex justify-center mb-10'>
-                <button className="btn btn-primary bg-gradient-to-r from-[#632EE3] to-[#9F62F2] lg:mr-4 items-center text-white font-bold text-lg">Primary</button>
+                <Link to="/apps" className="btn btn-primary bg-gradient-to-r from-[#632EE3] to-[#9F62F2] lg:mr-4 items-center text-white font-bold text-lg">Show All</Link>
             </div>
         </div>
     );
