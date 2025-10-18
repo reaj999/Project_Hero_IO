@@ -50,9 +50,14 @@ const Navbar = () => {
             </ul>
         </div>
         <div className="navbar-end">
-            <a className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] lg:mr-4">
-            <img src={vector} alt="" />
-            <span className='text-white text-l font-semibold'>Contribute</span>
+            <a
+                href="https://github.com/reaj999"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] lg:mr-4"
+            >
+                <img src={vector} alt="Contribute icon" />
+                <span className='text-white text-l font-semibold'>Contribute</span>
             </a>
         </div>
         </div>
