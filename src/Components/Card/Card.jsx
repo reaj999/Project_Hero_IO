@@ -12,7 +12,7 @@ const Card = ({ app }) => {
                 <img src={image} alt={`${title} logo`} className="rounded-xl h-48 w-64 object-cover" />
             </figure>
             <div className="card-body text-left">
-                <h2 className="text-lg font-medium text-left">{title}</h2>
+                <h2 className="text-lg font-medium text-left whitespace-nowrap overflow-hidden text-ellipsis">{title}</h2>
                 <div className="card-actions flex justify-between mt-2">
                     <button className="btn bg-[#F1F5E8] text-[#00D390]">
                         <img src={downloadicon} alt="Download icon" className='w-4 h-4' />

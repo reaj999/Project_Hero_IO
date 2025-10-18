@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import data from '../../../public/data.json';
 import Card from '../../Components/Card/Card';
 
 
 const Apps = () => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [filteredApps, setFilteredApps] = useState(data);
+
+    useEffect(() => {
+        const results = data.filter(app =>
+            app.title.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setFilteredApps(results);
+    }, [searchTerm]);
+
+    const handleSearchChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
     return (
         <div>
             <h1 className='text-4xl font-bold text-center my-8 text-[#001931]'>Our All Applications</h1>
@@ -12,7 +26,7 @@ const Apps = () => {
                 <div>
                     <h2 className='text-xl font-semibold'>
                         (<span>
-                            {data.length}
+                            {filteredApps.length}
                         </span>) Apps Found
                     </h2>
                 </div>
@@ -30,12 +44,17 @@ const Apps = () => {
                         <path d="m21 21-4.3-4.3"></path>
                         </g>
                     </svg>
-                    <input type="search" required placeholder="Search Apps" />
+                    <input
+                        type="search"
+                        required
+                        placeholder="Search Apps"
+                        value={searchTerm}
+                        onChange={handleSearchChange} />
                     </label>
                 </div>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto pb-8 justify-items-center'>
-                {data.map((app) => (
+                {filteredApps.map((app) => (
                     <Card key={app.id} app={app} />
                 ))}
             </div>
