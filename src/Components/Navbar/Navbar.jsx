@@ -1,14 +1,31 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
 import vector from '../../assets/Vector.png';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
-    const links = <>
-    <li className='m-2'><Link to='/'>Home</Link></li>
-    <li className='m-2'><Link to='/apps'>Apps</Link></li>
-    <li className='m-2'><Link to='/installation'>Installation</Link></li>
-    </>
+    const activeLinkClass = "relative bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-bold after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:w-full after:bg-gradient-to-r after:from-[#632EE3] after:to-[#9F62F2]";
+    const inactiveLinkClass = "font-bold relative after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#632EE3] after:to-[#9F62F2] after:transition-all after:duration-300 hover:after:w-full";
+
+    const links = (
+        <>
+            <li className='m-2'>
+                <NavLink to='/' className={({ isActive }) => isActive ? activeLinkClass : inactiveLinkClass}>
+                    Home
+                </NavLink>
+            </li>
+            <li className='m-2'>
+                <NavLink to='/apps' className={({ isActive }) => isActive ? activeLinkClass : inactiveLinkClass}>
+                    Apps
+                </NavLink>
+            </li>
+            <li className='m-2'>
+                <NavLink to='/installation' className={({ isActive }) => isActive ? activeLinkClass : inactiveLinkClass}>
+                    Installation
+                </NavLink>
+            </li>
+        </>
+    );
     return (
         <div className="navbar bg-base-100 shadow-sm pl-2 pr-2">
         <div className="navbar-start">
