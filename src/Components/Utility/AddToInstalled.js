@@ -20,10 +20,10 @@ const AddToInstalledDB = (id) => {
     }
     else{
         installedAppsData.push(id);
-        const data = JSON.stringify(installedAppsData);
-        localStorage.setItem('installedApps', data);
+        const localData = JSON.stringify(installedAppsData);
+        localStorage.setItem('installedApps', localData);
     }
     
 };
 
-export {AddToInstalledDB};
+export {AddToInstalledDB, getInstalledApps};
