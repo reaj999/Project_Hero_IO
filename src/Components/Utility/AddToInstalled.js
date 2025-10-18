@@ -26,4 +26,12 @@ const AddToInstalledDB = (id) => {
     
 };
 
+
+export const removeInstalledApp = (id) => {
+  let installed = JSON.parse(localStorage.getItem("installedApps")) || [];
+  const updatedInstalled = installed.filter(appId => String(appId) !== String(id));
+  localStorage.setItem("installedApps", JSON.stringify(updatedInstalled));
+};
+
+
 export {AddToInstalledDB, getInstalledApps};

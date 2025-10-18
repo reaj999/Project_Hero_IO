@@ -1,9 +1,14 @@
 import React from 'react';
 import downloadicon from '../../assets/icon-downloads.png';
 import ratingicon from '../../assets/icon-ratings.png';
+import { removeInstalledApp } from '../../Components/Utility/AddToInstalled';
 
+const installedListCard = ({ myInstalledList: cardData, onUninstall }) => {
 
-const installedListCard = ({ myInstalledList: cardData }) => {
+    const handleUninstall = () => {
+    removeInstalledApp(cardData.id);
+    onUninstall(cardData.id);
+};
 
     return (
         <div className='flex flex-row justify-between items-center bg-white p-4 rounded-lg shadow-sm w-full max-w-6xl mx-auto mb-4'>
@@ -27,7 +32,7 @@ const installedListCard = ({ myInstalledList: cardData }) => {
             </div>
             </div>
             <div>
-                <button className="btn btn-accent text-white font-semibold bg-[#00D390]">Uninstall</button>
+                <button onClick={handleUninstall} className="btn btn-accent text-white font-semibold bg-[#00D390]">Uninstall</button>
             </div>
         </div>
     );

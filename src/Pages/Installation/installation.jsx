@@ -14,6 +14,10 @@ const installation = () => {
         const installedList = data.filter(Apps => convertedData.includes(Apps.id));
         setInstalledApps(installedList)
     }, []);
+
+    const handleUninstall = (id) => {
+        setInstalledApps(prev => prev.filter(app => app.id !== id));
+    };
     
     return (
         <div className='bg-[#f8f8f8] min-h-screen'>
@@ -29,12 +33,27 @@ const installation = () => {
                     </h2>
             </div>
         </div>
-        <div>
+        {/* <div>
             <div className=''>
                 {
                     myInstalledList.map(app => <ListCard key={app.id} myInstalledList={app}></ListCard>)
                 }
             </div>
+        </div> */}
+        <div>
+            {myInstalledList.length > 0 ? (
+            myInstalledList.map(app => (
+                <ListCard
+                key={app.id}
+                myInstalledList={app}
+                onUninstall={handleUninstall}
+                />
+            ))
+            ) : (
+            <p className='text-center text-gray-500 text-lg'>
+                No installed apps found.
+            </p>
+            )}
         </div>
         </div>
     );
