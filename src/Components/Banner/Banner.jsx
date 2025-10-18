@@ -18,12 +18,22 @@ const Banner = () => {
                 Our goal is to turn your ideas into digital experiences that truly make an impact.
             </p>
             <div className='mt-8 flex justify-center gap-6'>
-                <button className="btn font-semibold text-[#001931] p-2 px-4">
+                <a
+                    href="https://play.google.com/store/apps"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn font-semibold text-[#001931] p-2 px-4"
+                >
                     <img src={playstore} alt="" className='h-6 w-6'/>
-                     Google Play</button>
-                <button className="btn font-semibold text-[#001931] p-2 px-4">
+                     Google Play
+                </a>
+                <a
+                    href="https://www.apple.com/app-store/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn font-semibold text-[#001931] p-2 px-4">
                     <img src={appstore} alt="" className='h-6 w-6'/>
-                     App Store</button>
+                     App Store</a>
             </div>
             <div className='mt-6 flex justify-center items-center mb-0'>
                 <img src={hero} alt=""/>
