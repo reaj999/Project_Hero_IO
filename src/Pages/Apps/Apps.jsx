@@ -19,7 +19,7 @@ const Apps = () => {
     };
 
     return (
-        <div>
+        <div className='bg-[#f8f8f8] min-h-screen'>
             <h1 className='text-4xl font-bold text-center my-8 text-[#001931]'>Our All Applications</h1>
             <p className='text-[#627382] text-lg mt-8 text-center mb-8'>Explore All Apps on the Market developed by us. We code for Millions</p>
             <div className='flex flex-col lg:flex-row gap-4 lg:justify-between max-w-6xl mx-auto items-center mb-6 px-4 lg:px-0'>
