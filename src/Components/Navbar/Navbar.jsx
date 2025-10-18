@@ -22,10 +22,10 @@ const Navbar = () => {
                 {links}
             </ul>
             </div>
-            <a className="btn btn-ghost text-xl flex items-center">
+            <Link to="/" className="btn btn-ghost text-xl flex items-center">
                 <img src={logo} alt="Hero logo" className="w-8 h-8" width="32" height="32" />
                 <span className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-bold">HERO.IO</span>
-            </a>
+            </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
