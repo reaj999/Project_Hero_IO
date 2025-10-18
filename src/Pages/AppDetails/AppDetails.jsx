@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import data from '../../../public/data.json';
 import { useParams } from 'react-router';
 import downloadicon from '../../assets/icon-downloads.png';
 import ratingicon from '../../assets/icon-ratings.png';
 import reviewicon from '../../assets/icon-review.png';
-import { AddToInstalledDB } from '../../Components/Utility/AddToInstalled';
+import { AddToInstalledDB, getInstalledApps } from '../../Components/Utility/AddToInstalled';
 import BarChart from '../../Components/Rating Chart/RatingChart';
 
 const AppDetails = () => {
     const { id } = useParams();
     const appId = parseInt(id);
     const app = data.find(item => item.id === appId);
-
+    
+    const [isInstalled, setIsInstalled] = useState(false);
+    
+    useEffect(() => {
+        const installedApps = getInstalledApps();
+        if (installedApps.includes(id)) {
+            setIsInstalled(true);
+        }
+    }, [id]);
+    
     const HandleInstalled = (id) => {
         AddToInstalledDB(id);
+        setIsInstalled(true);
     }
 
     return (
@@ -47,7 +57,13 @@ const AppDetails = () => {
                     <p className='font-bold text-4xl text-[#001931]'>{app.downloads}</p>
                 </div>
             </div>
-            <button onClick={() => HandleInstalled(id)} className="btn btn-accent mt-10 text-white font-semibold bg-[#00D390]mb-4">Install Now <span>({app.downloads})</span></button>
+            {isInstalled ? (
+                <button disabled className="btn btn-accent mt-10 text-white font-semibold bg-gray-400 mb-4">
+                    Installed
+                </button>
+            ) : (
+                <button onClick={() => HandleInstalled(id)} className="btn btn-accent mt-10 text-white font-semibold bg-[#00D390] mb-4">Install Now <span>({app.size} MB)</span></button>
+            )}
             </div>
             </div>
             <div>
