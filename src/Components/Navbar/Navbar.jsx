@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
 import vector from '../../assets/Vector.png';
+import { Link } from 'react-router';
 
 const Navbar = () => {
     const links = <>
-    <li className='m-2'><a>Home</a></li>
-    <li className='m-2'><a>Apps</a></li>
-    <li className='m-2'><a>Installation</a></li>
+    <li className='m-2'><Link to='/'>Home</Link></li>
+    <li className='m-2'><Link to='/apps'>Apps</Link></li>
+    <li className='m-2'><Link to='/installation'>Installation</Link></li>
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm pl-2 pr-2">

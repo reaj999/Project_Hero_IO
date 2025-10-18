@@ -4,6 +4,7 @@ import Stat from '../../Components/Stat/Stat';
 import TrendingApps from '../../Trending Apps/TrendingApps';
 
 const Home = () => {
+    // const data = React.useLoaderData();
     return (
         <><Banner></Banner>
         <Stat></Stat>
