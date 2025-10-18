@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter } from "react-router";
 import Root from '../Pages/Root/Root';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
-import Home from '../Pages/Home/Home';
-import Apps from '../Pages/Apps/Apps';
-import Installation from '../Pages/Installation/Installation';
-import AppDetails from '../Pages/AppDetails/AppDetails';
-import Error from '../Pages/404 Error page/Error';
+import Loading from '../Components/Loader/Spinner';
+
+
+const Home = lazy(() => import('../Pages/Home/Home'));
+const Apps = lazy(() => import('../Pages/Apps/Apps'));
+const Installation = lazy(() => import('../Pages/Installation/Installation'));
+const AppDetails = lazy(() => import('../Pages/AppDetails/AppDetails'));
+const Error = lazy(() => import('../Pages/404 Error page/Error'));
+
 
 export const router = createBrowserRouter([
   {
@@ -17,25 +21,24 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        // loader:() => fetch('/data.json'),
         path: "/",
-        Component: Home,
+        Component: () => <Suspense fallback={<Loading />}><Home /></Suspense> 
       },
       {
         path: "/apps",
-        Component: Apps,
+        Component: () => <Suspense fallback={<Loading />}><Apps /></Suspense> 
       },
       {
         path: "/installation",
-        Component: Installation,
+        Component: () => <Suspense fallback={<Loading />}><Installation /></Suspense>,
       },
       {
         path: "/appDetails/:id",
-        Component: AppDetails,
+        Component: () => <Suspense fallback={<Loading />}><AppDetails /></Suspense>,
       },
       {
         path: "*",
-        Component: Error,
+        Component: () => <Suspense fallback={<Loading />}><Error /></Suspense>,
       },
     ],
   },

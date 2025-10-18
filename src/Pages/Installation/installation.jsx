@@ -24,28 +24,13 @@ const Installation = () => {
         removeInstalledApp(id);
     };
 
-    //   const handleSort = (option) => {
-    //     setSortOption(option);
-    //     let sortedList = [...myInstalledList];
-
-    //     if (option === 'Small to Large') {
-    //     sortedList.sort((a, b) => a.size - b.size);
-    //     } else if (option === 'Large to Small') {
-    //     sortedList.sort((a, b) => b.size - a.size);
-    //     } else if (option === 'Recently Added') {
-    //     sortedList.sort((a, b) => b.id - a.id); // assuming higher ID = newer
-    //     }
-
-    //     setInstalledApps(sortedList);
-    // };
-
         const sortedApps = [...myInstalledList].sort((a, b) => {
         if (sortOption === "small") {
         return a.size - b.size;
         } else if (sortOption === "large") {
         return b.size - a.size;
         } else {
-        return b.id - a.id; // Recently added (by ID)
+        return b.id - a.id; 
         }
     });
     
@@ -58,16 +43,6 @@ const Installation = () => {
             <h2 className='text-xl font-semibold'>
                 (<span>{myInstalledList.length}</span>) Apps Found
             </h2>
-            {/* <div className="dropdown dropdown-bottom dropdown-end">
-            <div tabIndex={0} role="button" className="btn m-1 font-light">Sort By Size 
-                <img src={dd} alt=""  className='w-2 h-2'/>
-            </div>
-            <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                <li><a>Recently Added</a></li>
-                <li><a>Small to Large</a></li>
-                <li><a>Large to Small</a></li>
-            </ul>
-            </div> */}
 
         <div className="dropdown dropdown-bottom dropdown-end">
           <div tabIndex={0} role="button" className="btn m-1 font-light">
@@ -84,20 +59,6 @@ const Installation = () => {
         </div>
 
         <div>
-            {/* {myInstalledList.length > 0 ? (
-            myInstalledList.map(app => (
-                <ListCard
-                key={app.id}
-                myInstalledList={app}
-                onUninstall={handleUninstall}
-                />
-            ))
-            ) : (
-            <p className='text-center text-gray-500 text-lg'>
-                No installed apps found.
-            </p>
-            )} */}
-
             {sortedApps.length > 0 ? (
             sortedApps.map(app => (
                 <ListCard
