@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import data from '../../../public/data.json';
-import { useParams } from 'react-router';
+import { useParams, useNavigate } from 'react-router';
 import downloadicon from '../../assets/icon-downloads.png';
 import ratingicon from '../../assets/icon-ratings.png';
 import reviewicon from '../../assets/icon-review.png';
@@ -12,8 +12,13 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const AppDetails = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const appId = parseInt(id);
-    const app = data.find(item => item.id === appId);
+    const app = data.find(a => a.id === appId);
+
+    // if (!app) {
+    //     navigate('/src/Pages/ErrorPage/ErrorPage.jsx');
+    // }
     
     const [isInstalled, setIsInstalled] = useState(false);
     

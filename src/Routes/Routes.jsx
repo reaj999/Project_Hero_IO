@@ -7,7 +7,7 @@ import Home from '../Pages/Home/Home';
 import Apps from '../Pages/Apps/Apps';
 import Installation from '../Pages/Installation/Installation';
 import AppDetails from '../Pages/AppDetails/AppDetails';
-import error from '../Pages/404 Error page/Error';
+import Error from '../Pages/404 Error page/Error';
 
 export const router = createBrowserRouter([
   {
@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "*",
-        Component: error,
+        Component: Error,
       },
     ],
   },
